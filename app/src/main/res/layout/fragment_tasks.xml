@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:translationY="-100dp">
+
+    <LinearLayout
+            android:id="@+id/bgGradient"
+            android:layout_width="600dp"
+            android:layout_height="400dp"
+
+            android:background="@drawable/bg_gradient_blue"
+
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/whiteBox"
+            android:layout_width="350dp"
+            android:layout_height="1000dp"
+            android:layout_marginTop="160dp"
+
+            android:background="@drawable/bg_rounded_white"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+                android:id="@+id/tasksTop_yourTasks"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+
+
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/sharpsans_extrabold"
+                android:text="Your tasks"
+                android:textColor="@color/DarkGray"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/tasksTop_newTaskButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+                android:id="@+id/tasksTop_newTaskButton"
+                android:layout_width="133dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/bg_gradient_blue_rsquare"
+                android:fontFamily="@font/sharpsans_extrabold"
+                android:text="Add new task"
+                android:textColor="@color/White"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tasksTop_yourTasks"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <ListView
+                android:id="@+id/tasksTasks_listView"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:divider="@drawable/bg_rounded_white"
+                android:dividerHeight="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tasksTop_yourTasks" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/newTasksPageLayoutBg"
+                android:layout_width="match_parent"
+                android:layout_height="10000dp"
+
+                android:layout_marginTop="32dp"
+                android:background="@color/DarkGrayT"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/bgGradient"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bgGradient">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/newTasksPageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="717dp"
+
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+
+                android:background="@drawable/bg_rounded_white"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.52"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/whiteBox">
+
+            <Button
+                    android:id="@+id/newTasksPage_closeButton"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/bg_accent_rsquare"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="CLOSE"
+                    android:textColor="@color/White"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.62"
+                    app:layout_constraintStart_toEndOf="@+id/newTasksPage_title"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                    android:id="@+id/newTasksPage_title"
+                    android:layout_width="240dp"
+                    android:layout_height="35dp"
+
+
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="Add a new task"
+                    android:textColor="@color/DarkGray"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                    android:id="@+id/newTasksPage_TaskNameTitle"
+                    android:layout_width="150dp"
+                    android:layout_height="27dp"
+
+                    android:layout_marginStart="32dp"
+
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_gradient_blue_rsquare"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="  Task name"
+                    android:textColor="@color/White"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newTasksPage_title" />
+
+            <EditText
+                    android:id="@+id/newTasksPage_taskNameEntry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text=""
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newTasksPage_TaskNameTitle" />
+
+            <TextView
+                    android:id="@+id/newTasksPage_taskClassTitle"
+                    android:layout_width="150dp"
+                    android:layout_height="27dp"
+
+                    android:layout_marginStart="32dp"
+
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_gradient_blue_rsquare"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="  Associated class"
+                    android:textColor="@color/White"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newTasksPage_taskNameEntry" />
+
+            <EditText
+                    android:id="@+id/newTasksPage_taskAssociatedClassEntry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newTasksPage_taskClassTitle" />
+
+            <TextView
+                    android:id="@+id/newTasksPage_taskDeadlineTitle"
+                    android:layout_width="150dp"
+                    android:layout_height="27dp"
+
+                    android:layout_marginStart="32dp"
+
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_gradient_blue_rsquare"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="  Deadline"
+                    android:textColor="@color/White"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newTasksPage_taskAssociatedClassEntry" />
+
+            <EditText
+                    android:id="@+id/newTasksPage_taskDeadlineEntry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newTasksPage_taskDeadlineTitle" />
+
+            <Button
+                    android:id="@+id/newTasksPage_taskSubmissionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/bg_accent_rsquare"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="Confirm"
+                    android:textColor="@color/White"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

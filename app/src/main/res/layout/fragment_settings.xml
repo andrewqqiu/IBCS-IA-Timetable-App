@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <EditText
+            android:id="@+id/settings_classRemovalInput"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/settings_taskEditButton"
+            app:layout_constraintTop_toBottomOf="@+id/settings_taskEditButton" />
+
+    <EditText
+            android:id="@+id/settings_taskRemovalInput"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/settings_taskEditButton"
+            app:layout_constraintTop_toBottomOf="@+id/settings_editsTitle" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/settingsPagePopupBg"
+            android:layout_width="match_parent"
+            android:layout_height="10000dp"
+
+            android:background="@color/DarkGrayT"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+            android:id="@+id/settings_classEditButton"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_gradient_blue_rsquare"
+            android:fontFamily="@font/sharpsans_extrabold"
+            android:text="Remove classes"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settings_taskEditButton" />
+
+    <TextView
+            android:id="@+id/settings_editsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/sharpsans_extrabold"
+            android:text="Remove classes and tasks"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settings_usernameButton" />
+
+    <Button
+            android:id="@+id/settings_taskEditButton"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_gradient_blue_rsquare"
+            android:fontFamily="@font/sharpsans_extrabold"
+            android:text="Remove tasks"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settings_editsTitle" />
+
+    <Button
+            android:id="@+id/settings_usernameButton"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_gradient_blue_rsquare"
+            android:fontFamily="@font/sharpsans_extrabold"
+            android:text="Confirm"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settings_usernameInput" />
+
+    <EditText
+            android:id="@+id/settings_usernameInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settings_usernameTitle" />
+
+    <TextView
+            android:id="@+id/settings_usernameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/sharpsans_extrabold"
+            android:text="Update username"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settings_incrementMinus1" />
+
+    <Button
+            android:id="@+id/settings_incrementPlus1"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_gradient_blue_rsquare"
+            android:fontFamily="@font/sharpsans_extrabold"
+            android:text="+1"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/settings_incrementMinus1"
+            app:layout_constraintTop_toBottomOf="@+id/settings_incrementTitle" />
+
+    <Button
+            android:id="@+id/settings_incrementMinus1"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_gradient_blue_rsquare"
+            android:fontFamily="@font/sharpsans_extrabold"
+            android:text="-1"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settings_incrementTitle" />
+
+    <TextView
+            android:id="@+id/text_notifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/sharpsans_extrabold"
+            android:text="Settings"
+            android:textAlignment="center"
+            android:textColor="@color/DarkGray"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+            android:id="@+id/settings_databaseClearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="90dp"
+            android:background="@drawable/bg_accent_rsquare"
+            android:fontFamily="@font/sharpsans_extrabold"
+            android:text="RESET DATABASE (!)"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+            android:id="@+id/settings_incrementTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/sharpsans_extrabold"
+            android:text="Increment Current Day"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_notifications" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

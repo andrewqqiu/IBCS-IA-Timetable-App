@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/newClassPageLayoutBg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:translationY="-100dp">
+
+
+        <LinearLayout
+                android:id="@+id/bgGradient"
+                android:layout_width="600dp"
+                android:layout_height="400dp"
+
+                android:background="@drawable/bg_gradient_blue"
+
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:id="@+id/dashboardTop_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="160dp"
+                android:layout_marginEnd="60dp"
+                android:fontFamily="@font/sharpsans_extrabold"
+                android:text="@string/username"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+
+                android:textSize="38sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:id="@+id/dashboardTop_currentDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:fontFamily="@font/sharpsans_bold"
+                android:text="It's [current date]"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dashboardTop_username" />
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dashboardTop_username" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/whiteBox"
+                android:layout_width="350dp"
+                android:layout_height="1000dp"
+
+                android:layout_marginTop="32dp"
+                android:background="@drawable/bg_rounded_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dashboardTop_currentDate">
+
+            <TextView
+                    android:id="@+id/dashboardClasses_todayTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+
+
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="Today"
+                    android:textColor="@color/DarkGray"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                    android:id="@+id/dashboardClasses_dayTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="is Day x"
+                    android:textColor="@color/LightGray"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <ListView
+                    android:id="@+id/dashboardClasses_listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:divider="@drawable/bg_rounded_white"
+                    android:dividerHeight="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dashboardClasses_todayTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

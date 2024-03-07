@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:translationY="-100dp">
+
+        <LinearLayout
+                android:id="@+id/bgGradient"
+                android:layout_width="600dp"
+                android:layout_height="400dp"
+
+                android:background="@drawable/bg_gradient_blue"
+
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/whiteBox"
+                android:layout_width="350dp"
+                android:layout_height="1000dp"
+                android:layout_marginTop="160dp"
+
+                android:background="@drawable/bg_rounded_white"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <ListView
+                    android:id="@+id/weeklyClasses_listView_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:divider="@drawable/bg_rounded_white"
+                    android:dividerHeight="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/weeklyClasses_listTitle2" />
+
+            <TextView
+                    android:id="@+id/weeklyClasses_listTitle2Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/sharpsans_medium"
+                    android:text="August 6"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/weeklyClasses_listTitle2"
+                    app:layout_constraintTop_toBottomOf="@+id/weeklyClasses_listView_1" />
+
+            <TextView
+                    android:id="@+id/weeklyClasses_listTitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="Friday"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/weeklyClasses_listView_1" />
+
+            <TextView
+                    android:id="@+id/weeklyClasses_listTitle1Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/sharpsans_medium"
+                    android:text="August 5"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/weeklyClasses_listTitle1"
+                    app:layout_constraintTop_toBottomOf="@+id/weeklyTop_thisWeek" />
+
+            <TextView
+                    android:id="@+id/weeklyClasses_listTitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="Thursday"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/weeklyTop_thisWeek" />
+
+            <ListView
+                    android:id="@+id/weeklyClasses_listView_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:divider="@drawable/bg_rounded_white"
+                    android:dividerHeight="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/weeklyClasses_listTitle1" />
+
+            <TextView
+                    android:id="@+id/weeklyTop_thisWeek"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+
+
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="This week"
+                    android:textColor="@color/DarkGray"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toStartOf="@+id/weeklyTop_newClassButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                    android:id="@+id/weeklyTop_newClassButton"
+                    android:layout_width="133dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/bg_gradient_blue_rsquare"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="Add new class"
+                    android:textColor="@color/White"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/weeklyTop_thisWeek"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/newClassPageLayoutBg"
+                android:layout_width="match_parent"
+                android:layout_height="10000dp"
+
+                android:layout_marginTop="32dp"
+                android:background="@color/DarkGrayT"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/bgGradient"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bgGradient">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/newClassPageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="717dp"
+
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+
+                android:background="@drawable/bg_rounded_white"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.52"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/whiteBox">
+
+            <Button
+                    android:id="@+id/newClassPage_closeButton"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/bg_accent_rsquare"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="CLOSE"
+                    android:textColor="@color/White"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.62"
+                    app:layout_constraintStart_toEndOf="@+id/newClassPage_title"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                    android:id="@+id/newClassPage_title"
+                    android:layout_width="240dp"
+                    android:layout_height="35dp"
+
+
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="Add a new class"
+                    android:textColor="@color/DarkGray"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                    android:id="@+id/newClassPage_classNameTitle"
+                    android:layout_width="150dp"
+                    android:layout_height="27dp"
+
+                    android:layout_marginStart="32dp"
+
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_gradient_blue_rsquare"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="  Class name"
+                    android:textColor="@color/White"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_title" />
+
+            <EditText
+                    android:id="@+id/newClassPage_classNameEntry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text=""
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_classNameTitle" />
+
+            <TextView
+                    android:id="@+id/newClassPage_classLocationTitle"
+                    android:layout_width="150dp"
+                    android:layout_height="27dp"
+
+                    android:layout_marginStart="32dp"
+
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_gradient_blue_rsquare"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="  Class location"
+                    android:textColor="@color/White"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_classNameEntry" />
+
+            <EditText
+                    android:id="@+id/newClassPage_classLocationEntry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_classLocationTitle" />
+
+            <TextView
+                    android:id="@+id/newClassPage_classTeacherTitle"
+                    android:layout_width="150dp"
+                    android:layout_height="27dp"
+
+                    android:layout_marginStart="32dp"
+
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_gradient_blue_rsquare"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="  Class teacher"
+                    android:textColor="@color/White"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_classLocationEntry" />
+
+            <EditText
+                    android:id="@+id/newClassPage_classTeacherEntry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_classTeacherTitle" />
+
+            <TextView
+                    android:id="@+id/newClassPage_classTimesTitle"
+                    android:layout_width="150dp"
+                    android:layout_height="27dp"
+
+                    android:layout_marginStart="32dp"
+
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_gradient_blue_rsquare"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="  Class times"
+                    android:textColor="@color/White"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_classTeacherEntry" />
+
+            <CheckBox
+                    android:id="@+id/newClassPage_classTimesCheckbox1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="Day 1"
+                    android:textColor="@color/DarkGray"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_classTimesTitle" />
+
+            <EditText
+                    android:id="@+id/newClassPage_classTimesEntry1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="32dp"
+                    android:ems="10"
+                    android:inputType="time"
+                    app:layout_constraintBottom_toBottomOf="@+id/newClassPage_classTimesCheckbox1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/newClassPage_classTimesCheckbox1"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_classTimesTitle" />
+
+            <CheckBox
+                    android:id="@+id/newClassPage_classTimesCheckbox2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="Day 2"
+                    android:textColor="@color/DarkGray"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_classTimesCheckbox1" />
+
+            <EditText
+                    android:id="@+id/newClassPage_classTimesEntry2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="32dp"
+                    android:ems="10"
+                    android:inputType="time"
+                    app:layout_constraintBottom_toBottomOf="@+id/newClassPage_classTimesCheckbox2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/newClassPage_classTimesCheckbox1"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_classTimesEntry1" />
+
+            <CheckBox
+                    android:id="@+id/newClassPage_classTimesCheckbox3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="Day 3"
+                    android:textColor="@color/DarkGray"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_classTimesCheckbox2" />
+
+            <EditText
+                    android:id="@+id/newClassPage_classTimesEntry3"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="32dp"
+                    android:ems="10"
+                    android:inputType="time"
+                    app:layout_constraintBottom_toBottomOf="@+id/newClassPage_classTimesCheckbox3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/newClassPage_classTimesCheckbox1"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_classTimesEntry2" />
+
+            <CheckBox
+                    android:id="@+id/newClassPage_classTimesCheckbox4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="Day 4"
+                    android:textColor="@color/DarkGray"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_classTimesCheckbox3" />
+
+            <EditText
+                    android:id="@+id/newClassPage_classTimesEntry4"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="32dp"
+                    android:ems="10"
+                    android:inputType="time"
+                    app:layout_constraintBottom_toBottomOf="@+id/newClassPage_classTimesCheckbox4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/newClassPage_classTimesCheckbox1"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_classTimesEntry3" />
+
+            <CheckBox
+                    android:id="@+id/newClassPage_classTimesCheckbox5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="Day 5"
+                    android:textColor="@color/DarkGray"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_classTimesCheckbox4" />
+
+            <EditText
+                    android:id="@+id/newClassPage_classTimesEntry5"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="32dp"
+                    android:ems="10"
+                    android:inputType="time"
+                    app:layout_constraintBottom_toBottomOf="@+id/newClassPage_classTimesCheckbox5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/newClassPage_classTimesCheckbox1"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_classTimesEntry4" />
+
+            <CheckBox
+                    android:id="@+id/newClassPage_classTimesCheckbox6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="Day 6"
+                    android:textColor="@color/DarkGray"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_classTimesCheckbox5" />
+
+            <EditText
+                    android:id="@+id/newClassPage_classTimesEntry6"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="32dp"
+                    android:ems="10"
+                    android:inputType="time"
+                    app:layout_constraintBottom_toBottomOf="@+id/newClassPage_classTimesCheckbox6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/newClassPage_classTimesCheckbox1"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_classTimesEntry5" />
+
+            <CheckBox
+                    android:id="@+id/newClassPage_classTimesCheckbox7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="Day 7"
+                    android:textColor="@color/DarkGray"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_classTimesCheckbox6" />
+
+            <EditText
+                    android:id="@+id/newClassPage_classTimesEntry7"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="32dp"
+                    android:ems="10"
+                    android:inputType="time"
+                    app:layout_constraintBottom_toBottomOf="@+id/newClassPage_classTimesCheckbox7"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/newClassPage_classTimesCheckbox1"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_classTimesEntry6" />
+
+            <Button
+                    android:id="@+id/newClassPage_submitButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/bg_accent_rsquare"
+                    android:fontFamily="@font/sharpsans_extrabold"
+                    android:text="Confirm"
+                    android:textColor="@color/White"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newClassPage_classTimesCheckbox7" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
+
